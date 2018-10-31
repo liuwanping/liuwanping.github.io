@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-31T02:27:34.283Z</updated>
+  <updated>2018-10-31T02:34:00.319Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/10/31/Java%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E4%B8%8E-%EF%BC%8C%E7%9F%AD%E8%B7%AF%E4%B8%8E-%EF%BC%8C%E9%80%BB%E8%BE%91%E6%88%96-%EF%BC%8C%E7%9F%AD%E8%B7%AF%E6%88%96/"/>
     <id>http://yoursite.com/2018/10/31/Java中的逻辑与-，短路与-，逻辑或-，短路或/</id>
     <published>2018-10-31T01:56:00.000Z</published>
-    <updated>2018-10-31T02:27:34.283Z</updated>
+    <updated>2018-10-31T02:34:00.319Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><ul><li><strong>逻辑与&amp;</strong> ：&amp;左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。</li><li><strong>短路与&amp;&amp;</strong> ：如果&amp;&amp;的左边为false，则右边不看直接得出结果；只能计算boolean类型的与。</li><li><strong>逻辑或|</strong> ：|左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。</li><li><strong>短路或||</strong> ：如果||的左边为true，则右边不看直接得出结果；只能计算boolean类型的与。</li></ul><hr><h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><blockquote><p>求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> res = n;</span><br><span class="line"><span class="keyword">boolean</span> b = res!=<span class="number">0</span> &amp;&amp; (res+=Sum_Solution(n-<span class="number">1</span>))&gt;<span class="number">0</span>;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当递归到n = 0时，&amp;&amp;左边为false不看右边直接得出b = false，这条语句完成，接下来return 0，相当于递归出口，这时程序开始往上返。 </p>]]></content>
+    <content type="html"><![CDATA[<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><ul><li><strong>逻辑与&amp;</strong> ：&amp;左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。</li><li><strong>短路与&amp;&amp;</strong> ：如果&amp;&amp;的左边为false，则右边不看直接得出结果；只能计算boolean类型的与。</li><li><strong>逻辑或|</strong> ：|左右两边都判断再得出结果；可以计算boolean类型的或，也可以计算int类型数字的按位或。</li><li><strong>短路或||</strong> ：如果||的左边为true，则右边不看直接得出结果；只能计算boolean类型的或。</li></ul><hr><h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><blockquote><p>求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> res = n;</span><br><span class="line"><span class="keyword">boolean</span> b = res!=<span class="number">0</span> &amp;&amp; (res+=Sum_Solution(n-<span class="number">1</span>))&gt;<span class="number">0</span>;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当递归到n = 0时，&amp;&amp;左边为false不看右边直接得出b = false，这条语句完成，接下来return 0，相当于递归出口，这时程序开始往上返。 </p>]]></content>
     
     <summary type="html">
     
