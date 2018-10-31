@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Java中的逻辑与&，短路与&&，逻辑或|，短路或||]]></title>
     <url>%2F2018%2F10%2F31%2FJava%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E4%B8%8E-%EF%BC%8C%E7%9F%AD%E8%B7%AF%E4%B8%8E-%EF%BC%8C%E9%80%BB%E8%BE%91%E6%88%96-%EF%BC%8C%E7%9F%AD%E8%B7%AF%E6%88%96%2F</url>
-    <content type="text"><![CDATA[逻辑与&amp; ：&amp;左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。 短路与&amp;&amp; ：如果&amp;&amp;的左边为false，则右边不看直接得出结果；只能计算boolean类型的与。 逻辑或| ：|左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。 短路或|| ：如果||的左边为true，则右边不看直接得出结果；只能计算boolean类型的与。 例题： 求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。 12345public static int Sum_Solution(int n) &#123; int res = n; boolean b = res!=0 &amp;&amp; (res+=Sum_Solution(n-1))&gt;0; return res;&#125; 当递归到n = 0时，&amp;&amp;左边为false不看右边直接得出b = false，这条语句完成，接下来return 0，相当于递归出口，这时程序开始往上返。]]></content>
+    <content type="text"><![CDATA[区别： 逻辑与&amp; ：&amp;左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。 短路与&amp;&amp; ：如果&amp;&amp;的左边为false，则右边不看直接得出结果；只能计算boolean类型的与。 逻辑或| ：|左右两边都判断再得出结果；可以计算boolean类型的与，也可以计算int类型数字的按位与。 短路或|| ：如果||的左边为true，则右边不看直接得出结果；只能计算boolean类型的与。 例题： 求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。 12345public static int Sum_Solution(int n) &#123; int res = n; boolean b = res!=0 &amp;&amp; (res+=Sum_Solution(n-1))&gt;0; return res;&#125; 当递归到n = 0时，&amp;&amp;左边为false不看右边直接得出b = false，这条语句完成，接下来return 0，相当于递归出口，这时程序开始往上返。]]></content>
       <categories>
         <category>Java</category>
       </categories>
