@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="开始种树">
+<meta name="description" content="题目描述： 每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指Offer | 圆圈中最后剩下的数(约瑟夫环问题)">
 <meta property="og:url" content="http://yoursite.com/2018/10/31/剑指Offer-圆圈中最后剩下的数-约瑟夫环问题/index.html">
 <meta property="og:site_name" content="Liu Wanping&#39;s Blog">
-<meta property="og:description" content="开始种树">
+<meta property="og:description" content="题目描述： 每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-31T13:14:23.203Z">
+<meta property="og:updated_time" content="2018-10-31T13:18:28.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指Offer | 圆圈中最后剩下的数(约瑟夫环问题)">
-<meta name="twitter:description" content="开始种树">
+<meta name="twitter:description" content="题目描述： 每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下">
 
 
 
@@ -336,6 +336,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/剑指Offer/" itemprop="url" rel="index">
+                    <span itemprop="name">剑指Offer</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -374,7 +396,72 @@
       
 
       
-        
+        <h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><blockquote>
+<p>每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)</p>
+</blockquote>
+<hr>
+<h4 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h4><p>用链表模拟很好理解，依次删除结点，剩下最后一个即为最后结果。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*public class Node_List &#123;</span></span><br><span class="line"><span class="comment">	int val;</span></span><br><span class="line"><span class="comment">	Node_List next = null;</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	Node_List(int val)&#123;</span></span><br><span class="line"><span class="comment">		this.val = val;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">	Node_List cur = <span class="keyword">new</span> Node_List(<span class="number">0</span>);</span><br><span class="line">	Node_List head = cur;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">		Node_List node= <span class="keyword">new</span> Node_List(i);</span><br><span class="line">		cur.next = node;</span><br><span class="line">		cur = node;</span><br><span class="line">	&#125;    </span><br><span class="line">	cur.next = head;</span><br><span class="line">	</span><br><span class="line">	Node_List p = cur;</span><br><span class="line">	Node_List q = head;</span><br><span class="line">	<span class="keyword">while</span> (q.next.val!=q.val) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m-<span class="number">1</span>; i++) &#123;</span><br><span class="line">			p = p.next;</span><br><span class="line">			q = q.next;</span><br><span class="line">		&#125;</span><br><span class="line">		p.next = q.next;</span><br><span class="line">		q = q.next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> q.val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h4><p>链表选用LinkedList实现，较方法1可以提高一定效率。</p>
+<pre><code class="java"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>{
+    LinkedList&lt;Integer&gt; list = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)
+        list.add(i);
+    <span class="keyword">int</span> p = <span class="number">0</span>;
+    <span class="keyword">while</span> (list.size()&gt;<span class="number">1</span>) {
+        p = (p+m-<span class="number">1</span>)%list.size();<span class="comment">//注意这里使得可以从尾部跳回到头部</span>
+        list.remove(p);
+    }
+    <span class="keyword">return</span> list.size()==<span class="number">1</span>?list.get(<span class="number">0</span>):-<span class="number">1</span>;
+}
+</code></pre>
+<h4 id="方法3："><a href="#方法3：" class="headerlink" title="方法3："></a>方法3：</h4><p>当数据量比较大时，以上两种方法时间和空间都比较大，因此用归纳法找到规律然后利用递归。</p>
+<p>0，1，2，3，……，m-2，<del>m-1</del>，m，……，n-1 (总共n个数，删除第m-1个数)</p>
+<p>下次删的时候从下面第一行这个序列开始往后数，我们把这个序列用第二行的序列进行重新标号，根据第二行的标号来找对应第一行的标号，从第二行看很容易看出要删除的是m-1，那么第二行的m-1对应第一行的哪个数呢？</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">m</th>
+<th style="text-align:center">m+1</th>
+<th style="text-align:center">m+2</th>
+<th style="text-align:center">…</th>
+<th style="text-align:center"><del>m-1+m</del></th>
+<th style="text-align:center">…</th>
+<th style="text-align:center">n-1</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">…</th>
+<th style="text-align:center">m-2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center"><del>m-1</del></td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">n-1-m</td>
+<td style="text-align:center">n-m</td>
+<td style="text-align:center">n-m+1</td>
+<td style="text-align:center">n-m+2</td>
+<td style="text-align:center">…</td>
+<td style="text-align:center">n-1</td>
+</tr>
+</tbody>
+</table>
+<p>也就是第二行的任意一个数p对应第一行哪个数？<br>如果p &lt;= n-m，第二行的m-1对应第一行的 p+m；<br>如果p&gt; n-m，第二行的m-1对应第一行的 (p+m)%n；<br> 综上，合并以上两种情况，若第二行的数是p，则对应的第一行数是(p+m)%n。</p>
+<pre><code class="java"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>{
+    <span class="keyword">if</span>(n == <span class="number">0</span>)
+        <span class="keyword">return</span> -<span class="number">1</span>;
+    <span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">1</span>)
+        <span class="keyword">return</span> <span class="number">0</span>;
+    <span class="keyword">else</span> 
+        <span class="keyword">return</span> (LastRemaining_Solution(n-<span class="number">1</span>,m)+m)%n;
+}
+</code></pre>
+
       
     </div>
     
@@ -492,8 +579,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -521,7 +617,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -585,6 +681,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述："><span class="nav-number">1.</span> <span class="nav-text">题目描述：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法1："><span class="nav-number">2.</span> <span class="nav-text">方法1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法2："><span class="nav-number">3.</span> <span class="nav-text">方法2：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法3："><span class="nav-number">4.</span> <span class="nav-text">方法3：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
