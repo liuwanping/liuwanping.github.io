@@ -7,6 +7,9 @@
       <categories>
         <category>LeetCode</category>
       </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[剑指Offer | 圆圈中最后剩下的数(约瑟夫环问题)]]></title>
@@ -15,6 +18,9 @@
       <categories>
         <category>剑指Offer</category>
       </categories>
+      <tags>
+        <tag>剑指Offer</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Java中char，int，String的相加减]]></title>
