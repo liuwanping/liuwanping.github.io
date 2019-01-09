@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://github.com/liuwanping/MarkdownPics/raw/master/f9.png">
 <meta property="og:image" content="https://github.com/liuwanping/MarkdownPics/raw/master/f10.png">
 <meta property="og:image" content="https://github.com/liuwanping/MarkdownPics/raw/master/s4.png">
-<meta property="og:updated_time" content="2019-01-09T07:19:26.439Z">
+<meta property="og:updated_time" content="2019-01-09T07:20:27.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java用父类声明new子类对象VS用子类声明new子类对象的区别">
 <meta name="twitter:description" content="Father a = new Son();Son b = new Son();   1. a只能调用Faher中有的函数，不能调用Son中新添加的函数，同时如果Son中有覆盖掉Father的函数，访问的是Son中的函数，也就是说引用a与实例方法动态绑定。  a访问Father中有的函数：输出结果如下，可以看到调用的是子类的方法： a访问Father中没有的函数输出结果如下，报错： 2. 但是引用">
@@ -429,7 +429,7 @@
 <p><img src="https://github.com/liuwanping/MarkdownPics/raw/master/f10.png"></p>
 <p>输出结果：<br><img src="https://github.com/liuwanping/MarkdownPics/raw/master/s4.png"></p>
 <hr>
-<p>#####综上：<br>Father a = new Son();<br>Son b = new Son();</p>
+<p>综上：<br>Father a = new Son();<br>Son b = new Son();</p>
 <ol>
 <li>a只能调用Faher中有的函数，不能调用Son中新添加的函数，同时如果Son中有覆盖掉Father的函数，访问的是Son中的函数，也就是说引用a与实例方法动态绑定。</li>
 <li>但是引用a与成员变量、静态方法静态绑定，也就是说，a只能访问a里的成员变量、静态方法，即使b里有同名的成员变量、静态方法。</li>
